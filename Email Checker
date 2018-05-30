@@ -1,0 +1,12 @@
+x= input("Enter your email: \n")
+
+if '@' is None:
+  print("Error: no @ symbol")
+elif '.' is None:
+  print("Error: no period")
+elif x.index('.') < x.index('@'):
+  print("Error: Period must be after the @")
+elif ' ' in x:
+  print("Error: email can't have spaces")
+else:
+  print("Email is Valid")
