@@ -1,0 +1,94 @@
+import random,sys
+
+print("><><><><><><><><><><")
+print("Welcome to Hangman!!")
+print("><><><><><><><><><><")
+print()
+
+# Insert the code from last exercise here. 
+def theword():
+  global RanWord
+  myword = [line.strip() for line in open('wordbank.txt')]
+  RanWord = random.choice(myword)
+theword()
+number=0
+# Now ask the user to guess the word
+guess = list('_' * len(RanWord))
+while list(RanWord) != guess:
+  print(' '.join(guess))
+   # This joins the guess with the blank spaces.
+  x= str(input("Guess a Letter:")).upper()
+  if x not in RanWord:
+    print("Incorrect")
+    if number==0:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|             ")
+      print ("|             ")
+      print ("|             ")
+      print ("|             ")
+          
+    elif number==1:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|      0      ")
+      print ("|             ")
+      print ("|             ")
+      print ("|             ")
+          
+          
+    elif number==2:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|      0      ")
+      print ("|     /       ")
+      print ("|             ")
+      print ("|             ")
+          
+    elif number==3:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|      0      ")
+      print ("|     /|      ")
+      print ("|             ")
+      print ("|             ")
+          
+    elif number==4:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|      0      ")
+      print ("|     /|\     ")
+      print ("|             ")
+      print ("|             ")
+          
+    elif number==5:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|      0      ")
+      print ("|     /|\     ")
+      print ("|     /       ")
+      print ("|             ")
+          
+    else:
+      print ("________      ")
+      print ("|      |      ")
+      print ("|      0      ")
+      print ("|     /|\     ")
+      print ("|     / \     ")
+      print ("|             ")
+      print("Try Again")
+      sys.exit()
+    number+=1
+  else:
+    i = 0
+    while i < len(RanWord):
+      if list(RanWord)[i] == x:
+        guess[i] = x
+      i+= 1
+print('You\'re right! it\'s ' + RanWord + '.')
+
+
+
+
+
+
