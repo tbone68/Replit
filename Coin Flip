@@ -1,0 +1,21 @@
+function coinFlip(num){
+  tails=0
+  heads=0
+  var times=prompt("How many coin flips do you want?")
+  
+  for (i=0;i<times;i++){
+    var num=Math.floor(Math.random() * 2)
+    if (num===0){
+      tails+=1;
+    }
+    else{
+      heads+=1
+    }
+  }
+  console.log("Total coin flips: "+times)
+  console.log("===================")
+  console.log("Heads "+heads)
+  console.log("Tails "+tails)
+}
+
+console.log(coinFlip(5));
