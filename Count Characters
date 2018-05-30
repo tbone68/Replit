@@ -1,0 +1,16 @@
+function countCharacter(str, char) {
+  // your code here
+  var letter_Count = 0;
+ for (var position = 0; position < str.length; position++) 
+ {
+    if (str.charAt(position) == char) 
+      {
+      letter_Count += 1;
+      }
+  }
+  return letter_Count;
+}
+
+var output = countCharacter('I am a hacker', 'a');
+
+console.log(output);
