@@ -1,0 +1,10 @@
+function checkAge(name, age) {
+  // your code here
+  if (age>=21) {
+    return `Welcome, ${name}!`; //template literal to interpolate string
+  }
+  return `Go home, ${name}!`;
+}
+
+var output = checkAge('Tyler', 29);
+console.log(output);
